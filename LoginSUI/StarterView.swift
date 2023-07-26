@@ -9,12 +9,14 @@ import SwiftUI
 
 // Представление выбора следующего представления (экрана) по условию
 struct StarterView: View {
+    
     @EnvironmentObject private var user: User
     // Обращаемся к "сундуку" и берем данные, которыми инициализирован экземпляр
+    private var userIsRegistered = UserDefaults.standard.bool(forKey: "UserIsRegistered")
     
     var body: some View {
         Group {
-            if user.isRegistered {
+            if userIsRegistered {
                 ContentView()
             } else {
                 RegisterView(minNameLength: 3)

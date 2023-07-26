@@ -42,6 +42,7 @@ struct RegisterView: View {
         if !name.isEmpty {
             user.name = name
             user.isRegistered.toggle()
+            UserDefaults.standard.set(true, forKey: "UserIsRegistered")
         }
     }
 }
