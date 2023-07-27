@@ -10,8 +10,9 @@
 		D84FA7952A69C15800E427BA /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84FA7942A69C15800E427BA /* RegisterView.swift */; };
 		D84FA7972A69C31C00E427BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84FA7962A69C31C00E427BA /* User.swift */; };
 		D84FA7992A6BCFF300E427BA /* StarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84FA7982A6BCFF300E427BA /* StarterView.swift */; };
+		D84FA7B72A72F22000E427BA /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84FA7B62A72F21F00E427BA /* ButtonView.swift */; };
 		D8CA63962A61848600DF46AA /* LoginSUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA63952A61848600DF46AA /* LoginSUIApp.swift */; };
-		D8CA63982A61848600DF46AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA63972A61848600DF46AA /* ContentView.swift */; };
+		D8CA63982A61848600DF46AA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA63972A61848600DF46AA /* MainView.swift */; };
 		D8CA639A2A61849400DF46AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8CA63992A61849400DF46AA /* Assets.xcassets */; };
 		D8CA639D2A61849400DF46AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8CA639C2A61849400DF46AA /* Preview Assets.xcassets */; };
 		D8CA63A42A618EC100DF46AA /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA63A32A618EC100DF46AA /* TimeCounter.swift */; };
@@ -21,9 +22,10 @@
 		D84FA7942A69C15800E427BA /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		D84FA7962A69C31C00E427BA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D84FA7982A6BCFF300E427BA /* StarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterView.swift; sourceTree = "<group>"; };
+		D84FA7B62A72F21F00E427BA /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		D8CA63922A61848600DF46AA /* LoginSUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginSUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CA63952A61848600DF46AA /* LoginSUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSUIApp.swift; sourceTree = "<group>"; };
-		D8CA63972A61848600DF46AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D8CA63972A61848600DF46AA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D8CA63992A61849400DF46AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8CA639C2A61849400DF46AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D8CA63A32A618EC100DF46AA /* TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
@@ -62,7 +64,8 @@
 				D8CA63952A61848600DF46AA /* LoginSUIApp.swift */,
 				D84FA7982A6BCFF300E427BA /* StarterView.swift */,
 				D84FA7942A69C15800E427BA /* RegisterView.swift */,
-				D8CA63972A61848600DF46AA /* ContentView.swift */,
+				D8CA63972A61848600DF46AA /* MainView.swift */,
+				D84FA7B62A72F21F00E427BA /* ButtonView.swift */,
 				D8CA63A32A618EC100DF46AA /* TimeCounter.swift */,
 				D84FA7962A69C31C00E427BA /* User.swift */,
 				D8CA63992A61849400DF46AA /* Assets.xcassets */,
@@ -149,12 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8CA63982A61848600DF46AA /* ContentView.swift in Sources */,
+				D8CA63982A61848600DF46AA /* MainView.swift in Sources */,
 				D84FA7952A69C15800E427BA /* RegisterView.swift in Sources */,
 				D84FA7992A6BCFF300E427BA /* StarterView.swift in Sources */,
 				D8CA63A42A618EC100DF46AA /* TimeCounter.swift in Sources */,
 				D84FA7972A69C31C00E427BA /* User.swift in Sources */,
 				D8CA63962A61848600DF46AA /* LoginSUIApp.swift in Sources */,
+				D84FA7B72A72F22000E427BA /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

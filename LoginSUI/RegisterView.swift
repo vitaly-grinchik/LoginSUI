@@ -39,11 +39,7 @@ struct RegisterView: View {
     }
     
     private func registerUser() {
-        if !name.isEmpty {
-            user.name = name
-            user.isRegistered.toggle()
-            UserDefaults.standard.set(true, forKey: "UserIsRegistered")
-        }
+        user.login(user: name)
     }
 }
 

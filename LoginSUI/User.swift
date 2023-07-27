@@ -9,8 +9,21 @@ import Foundation
 
 class User: ObservableObject {
     // Отслеживаемое свойстсво: каждый раз при его изменении все представления
-    // (экземпляры струтур :View), зависящие от этого свойства, будут обновлены
-    @Published var isRegistered = false
+    // (экземпляры структур :View), зависящие от этого свойства, будут обновлены
+    @Published var isRegistered = UserDefaults.standard.bool(forKey: "userIsRegistered")
+    var name = UserDefaults.standard.string(forKey: "userName") ?? ""
     
-    var name = ""
+    func login(user userName: String) {
+        name = userName
+        isRegistered = true
+        // Сохраняем текущее состояние (данные) приложения
+        UserDefaults.standard.set(true, forKey: "userIsRegistered")
+        UserDefaults.standard.set(name, forKey: "userName")
+    }
+    
+    func logout() {
+        isRegistered = false
+        UserDefaults.standard.set(false, forKey: "userIsRegistered")
+        UserDefaults.standard.set("", forKey: "userName")
+    }
 }
