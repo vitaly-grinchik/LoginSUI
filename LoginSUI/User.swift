@@ -8,9 +8,10 @@
 import Foundation
 
 class User: ObservableObject {
-    // Отслеживаемое свойстсво: каждый раз при его изменении все представления
-    // (экземпляры структур :View), зависящие от этого свойства, будут обновлены
+    // Отслеживаемое свойство: каждый раз при его изменении все представления,
+    // зависящие от этого свойства, будут обновлены
     @Published var isRegistered = UserDefaults.standard.bool(forKey: "userIsRegistered")
+    // Извлекаем ранее введённое имя уже зарегестрированного юзера
     var name = UserDefaults.standard.string(forKey: "userName") ?? ""
     
     func login(user userName: String) {
