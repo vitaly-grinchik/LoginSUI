@@ -28,6 +28,7 @@ struct RegisterView: View {
                     )
             }
             .padding([.leading, .trailing], 50 )
+            
             Button(action: registerUser) {
                 HStack {
                     Image(systemName: "checkmark.circle")
