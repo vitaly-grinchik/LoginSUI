@@ -25,6 +25,6 @@ class User: ObservableObject {
     func logout() {
         isRegistered = false
         UserDefaults.standard.set(false, forKey: "userIsRegistered")
-        UserDefaults.standard.set("", forKey: "userName")
+        UserDefaults.standard.removeObject(forKey: "userName")
     }
 }
