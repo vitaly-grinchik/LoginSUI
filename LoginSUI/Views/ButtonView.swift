@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ButtonView: View {
     @ObservedObject var timer: TimeCounter
-    @EnvironmentObject var user: User
+    @EnvironmentObject var user: UserManager
     
     var title: String
     var foregroundColor: Color

@@ -11,12 +11,12 @@ import SwiftUI
 struct LoginSUIApp: App {
     // Первоначальная инициализация
     // Кладём объект - экземпляр класса - в окружение, этакий "сундук" среды (окружения)
-    @StateObject private var user = User()
+    @StateObject private var userManager = UserManager()
     
     var body: some Scene {
         WindowGroup {
             StarterView()
-                .environmentObject(user)
+                .environmentObject(userManager)
             // здесь уже передаётся реальный объект нашего окружения
         }
     }

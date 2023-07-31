@@ -11,12 +11,12 @@ import SwiftUI
 struct MainView: View {
 
     @StateObject private var timer = TimeCounter() // Состояние объекта
-    @EnvironmentObject private var user: User
+    @EnvironmentObject private var userManager: UserManager
     
     var body: some View {
         VStack {
             VStack(spacing: 50) {
-                Text("Hi, \(user.name)")
+                Text("Hi, \(userManager.user.name)")
                 Text(timer.counter.formatted())
             }
                 .font(.largeTitle)
@@ -45,13 +45,13 @@ struct MainView: View {
     
     private func logout() {
         timer.killTimer()
-        user.logout()
+        userManager.unregisterUser()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-            .environmentObject(User())
+            .environmentObject(UserManager())
     }
 }

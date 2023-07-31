@@ -11,7 +11,7 @@ import SwiftUI
 struct RegisterView: View {
     
     @State private var name = ""
-    @EnvironmentObject private var user: User
+    @EnvironmentObject private var userManager: UserManager
     
     var minNameLength: Int
     
@@ -40,7 +40,7 @@ struct RegisterView: View {
     }
     
     private func registerUser() {
-        user.login(user: name)
+        userManager.register(userName: name)
     }
 }
 
