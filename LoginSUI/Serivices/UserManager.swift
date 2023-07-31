@@ -5,8 +5,8 @@
 //  Created by Виталий Гринчик on 20.07.23.
 //
 
+/// ЗАДАЧА: ОБРАБОТКА ДАННЫХ ПОЛЬЗОВАТЕЛЯ
 
-// ЗАДАЧА: ОБРАБОТКА ДАННЫХ ПОЛЬЗОВАТЕЛЯ
 import Foundation
 
 class UserManager: ObservableObject {
@@ -16,7 +16,7 @@ class UserManager: ObservableObject {
     // Извлекаем данные если таковые есть либо инициализируем "пустым" пользователем
     @Published var user = StorageManager.shared.fetchUser()
     
-    func register(userName: String) {
+    func registerUser(withName userName: String) {
         // Регистрируем пользователя ...
         user.name = userName
         user.isRegistered = true

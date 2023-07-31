@@ -40,7 +40,7 @@ struct RegisterView: View {
     }
     
     private func registerUser() {
-        userManager.register(userName: name)
+        userManager.registerUser(withName: name)
     }
 }
 

@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct LoginSUIApp: App {
     // Первоначальная инициализация
-    // Кладём объект - экземпляр класса - в окружение, этакий "сундук" среды (окружения)
+    // Кладём объект - экземпляр класса - в окружение, этакий "сундук" окружения
     @StateObject private var userManager = UserManager()
     
     var body: some Scene {
