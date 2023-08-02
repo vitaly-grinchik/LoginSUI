@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ButtonView: View {
-    @ObservedObject var timer: TimeCounter
-    @EnvironmentObject var user: UserManager
     
     var title: String
     var foregroundColor: Color
@@ -36,11 +34,11 @@ struct ButtonView: View {
 
 struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView(timer: TimeCounter(),
-                   title: "Logout",
-                   foregroundColor: .white,
-                   backgroundColor: .blue,
-                   action: {}
+        ButtonView(
+            title: "Logout",
+            foregroundColor: .white,
+            backgroundColor: .blue,
+            action: {}
         )
     }
 }

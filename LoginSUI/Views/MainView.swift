@@ -25,7 +25,6 @@ struct MainView: View {
             Spacer()
             
             ButtonView(
-                timer: timer,
                 title: timer.buttonTitle,
                 foregroundColor: .white,
                 backgroundColor: .red,
@@ -34,11 +33,11 @@ struct MainView: View {
             
             Spacer()
             
-            ButtonView(timer: timer,
-                       title: "Logout",
-                       foregroundColor: .white,
-                       backgroundColor: .blue,
-                       action: logout
+            ButtonView(
+                title: "Logout",
+                foregroundColor: .white,
+                backgroundColor: .blue,
+                action: logout
             )
         }
     }

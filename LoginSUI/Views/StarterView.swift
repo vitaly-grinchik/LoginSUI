@@ -27,6 +27,7 @@ struct StarterView_Previews: PreviewProvider {
     static var previews: some View {
         StarterView()
             .environmentObject(UserManager())
-        // здесь UserManager() - другой экземпляр класса, не из окружения проекта, нужен просто для инициализации превью
+        // здесь UserManager() - другой экземпляр класса, не из окружения
+        // проекта, нужен просто для инициализации превью
     }
 }

@@ -29,11 +29,11 @@ class StorageManager {
     
     func fetchUser() -> User {
         guard let data = defaults.data(forKey: userDataKey) else {
-            return User()
+            return User() // Return "empty" user if no data available
         }
         
         guard let user = try? JSONDecoder().decode(User.self, from: data) else {
-            return User()
+            return User() // Return "empty" user if error on data decoding
         }
         return user
     }
