@@ -15,16 +15,21 @@ class UserManager: ObservableObject {
     // Извлекаем данные если таковые есть либо инициализируем "пустым" пользователем
     @Published var user = StorageManager.shared.fetchUser()
     
-    func registerUser(withName userName: String) {
+    private let minNameLength = 3
+    
+    var nameIsValid: Bool {
+        user.name.count >= minNameLength
+    }
+    
+    func registerUser() {
         // Регистрируем пользователя ...
-        user.name = userName
         user.isRegistered = true
         // ... и сохраняем данные
         StorageManager.shared.save(user)
     }
     
     func unregisterUser() {
-        user.isRegistered = false
+        user = User() // "Reset" user data	
         StorageManager.shared.delete(user)
     }
 }

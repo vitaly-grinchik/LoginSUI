@@ -10,22 +10,17 @@ import SwiftUI
 
 struct RegisterView: View {
     
-    @State private var name = ""
     @EnvironmentObject private var userManager: UserManager
-    
-    private let minNameLength = 3
     
     var body: some View {
         VStack {
             HStack {
-                TextField("Enter your name", text: $name)
+                TextField("Enter your name", text: $userManager.user.name)
                     .multilineTextAlignment(.center)
                     .textFieldStyle(.roundedBorder)
     
-                Text(name.count.formatted())
-                    .foregroundColor(
-                        name.count < minNameLength ? .red : .green
-                    )
+                Text(userManager.user.name.count.formatted())
+                    .foregroundColor(userManager.nameIsValid ? .green : .red)
             }
             .padding([.leading, .trailing], 50 )
             
@@ -35,12 +30,12 @@ struct RegisterView: View {
                     Text("Ok")
                 }
             }
-            .disabled(name.count < minNameLength)
+            .disabled(!userManager.nameIsValid)
         }
     }
     
     private func registerUser() {
-        userManager.registerUser(withName: name)
+        userManager.registerUser()
     }
 }
 
