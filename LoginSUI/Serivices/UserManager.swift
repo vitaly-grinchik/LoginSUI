@@ -5,8 +5,7 @@
 //  Created by Виталий Гринчик on 20.07.23.
 //
 
-/// ЗАДАЧА: ОБРАБОТКА ДАННЫХ ПОЛЬЗОВАТЕЛЯ
-
+/// ЗАДАЧА:  ОБРАБОТКА ДАННЫХ ПОЛЬЗОВАТЕЛЯ
 import Foundation
 
 class UserManager: ObservableObject {

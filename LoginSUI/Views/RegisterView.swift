@@ -5,15 +5,15 @@
 //  Created by Виталий Гринчик on 20.07.23.
 //
 
+/// ПРЕДСТАВЛЕНИЕ РЕГИСТРАЦИИ ПОЛЬЗОВАТЕЛЯ
 import SwiftUI
 
-// Представление регистрации пользователя
 struct RegisterView: View {
     
     @State private var name = ""
     @EnvironmentObject private var userManager: UserManager
     
-    var minNameLength: Int
+    private let minNameLength = 3
     
     var body: some View {
         VStack {
@@ -35,7 +35,7 @@ struct RegisterView: View {
                     Text("Ok")
                 }
             }
-            .disabled(name.count < 3)
+            .disabled(name.count < minNameLength)
         }
     }
     
@@ -46,6 +46,6 @@ struct RegisterView: View {
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView(minNameLength: 3)
+        RegisterView()
     }
 }

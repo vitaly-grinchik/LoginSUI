@@ -5,9 +5,9 @@
 //  Created by Виталий Гринчик on 14.07.23.
 //
 
+/// ОСНОВНОЕ ПРЕДСТАВЛЕНИЕ (ПОСЛЕ РЕГИСТРАЦИИ)
 import SwiftUI
 
-// Основное представление (после регистрации)
 struct MainView: View {
 
     @StateObject private var timer = TimeCounter() // Состояние объекта

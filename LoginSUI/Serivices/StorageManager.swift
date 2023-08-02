@@ -5,7 +5,7 @@
 //  Created by Виталий Гринчик on 28.07.23.
 //
 
-// ЗАДАЧА: хранение данных в UserDefaults
+/// ЗАДАЧА: ХРАНЕНИЕ ДАННЫХ В USERDEFAULTS
 import Foundation
 
 class StorageManager {

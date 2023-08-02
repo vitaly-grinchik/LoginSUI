@@ -5,9 +5,9 @@
 //  Created by Виталий Гринчик on 22.07.23.
 //
 
+/// ПРЕДСТАВЛЕНИЕ ВЫБОРА СЛЕДУЮЩЕГО ПРЕДСТАВЛЕНИЯ (ЭКРАНА) ПО УСЛОВИЮ
 import SwiftUI
 
-// Представление выбора следующего представления (экрана) по условию
 struct StarterView: View {
     
     @EnvironmentObject private var userManager: UserManager
@@ -17,7 +17,7 @@ struct StarterView: View {
             if userManager.user.isRegistered {
                 MainView()
             } else {
-                RegisterView(minNameLength: 3)
+                RegisterView()
             }
         }
     }

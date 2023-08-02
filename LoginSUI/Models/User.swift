@@ -5,7 +5,7 @@
 //  Created by Виталий Гринчик on 28.07.23.
 //
 
-// Модель
+/// МОДЕЛЬ
 struct User: Codable {
     var name: String
     var isRegistered: Bool
